@@ -64,7 +64,7 @@ describe CloudinaryHelper do
           :crop         => :scale,
           :height       => "200",
           :width        => "400",
-          :video_codec  => { :codec => 'h264' },
+          :video_codec  => { :codec => 'h264', profile: 'basic', level: '3.1', b_frames: false },
           :audio_codec  => 'acc',
           :start_offset => 3) }
 
