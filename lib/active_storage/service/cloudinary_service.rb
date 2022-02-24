@@ -70,7 +70,7 @@ module ActiveStorage
 
     def url_for_direct_upload(key, **options)
       instrument :url, key: key do |payload|
-        options = {:resource_type => resource_type(nil, key)}.merge(@options.merge(options.symbolize_keys))
+        options = {:resource_type => resource_type(nil, key, options[:content_type])}.merge(@options.merge(options.symbolize_keys))
         options[:public_id] = public_id_internal(key)
         # Provide file format for raw files, since js client does not include original file name.
         #
@@ -240,9 +240,9 @@ module ActiveStorage
       end
     end
 
-    def resource_type(io, key = "")
+    def resource_type(io, key = "", content_type = nil)
       options = key.respond_to?(:attributes) ? key.attributes : {}
-      content_type = options[:content_type] || (io.nil? ? '' : Marcel::MimeType.for(io))
+      content_type = content_type || options[:content_type] || (io.nil? ? '' : Marcel::MimeType.for(io))
       content_type_to_resource_type(content_type)
     end
   end

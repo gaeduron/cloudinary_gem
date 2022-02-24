@@ -2,6 +2,28 @@
 [![Gem Version](https://badge.fury.io/rb/cloudinary.svg)](https://rubygems.org/gems/cloudinary)
 [![Gem Version](https://badgen.net/rubygems/dt/cloudinary)](https://rubygems.org/gems/cloudinary)
 
+# Why I am using this fork?
+
+I have the same issue as this user: https://github.com/cloudinary/cloudinary_gem/issues/473 (2021)
+and this one too: https://github.com/cloudinary/cloudinary_gem/pull/424 (2020)
+
+But the cloundiary team as not addressed it for a long time now.
+
+⚠️ Make sure this for is updated at a version you need ⚠️
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Cloudinary Ruby on Rails SDK
 ===================
 
@@ -17,14 +39,27 @@ the [Ruby on Rails SDK Guide](https://cloudinary.com/documentation/rails_integra
 
 ## Table of Contents
 
-- [Key Features](#key-features)
-- [Version Support](#Version-Support)
-- [Installation](#installation)
+- [Why I am using this fork?](#why-i-am-using-this-fork)
+- [Cloudinary Ruby on Rails SDK](#cloudinary-ruby-on-rails-sdk)
+  - [About](#about)
+      - [Note](#note)
+  - [Table of Contents](#table-of-contents)
+  - [Key Features](#key-features)
+  - [Version Support](#version-support)
+  - [Installation](#installation)
 - [Usage](#usage)
-    - [Setup](#Setup)
-    - [Transform and Optimize Assets](#Transform-and-Optimize-Assets)
-    - [CarrierWave Integration](#CarrierWave-Integration)
-    - [Active Storage Integration](#Active-Storage-Integration)
+    - [Setup](#setup)
+    - [Transform and Optimize Assets](#transform-and-optimize-assets)
+    - [Upload](#upload)
+    - [CarrierWave Integration](#carrierwave-integration)
+    - [Active Storage Integration](#active-storage-integration)
+    - [Security options](#security-options)
+    - [Samples](#samples)
+  - [Contributions](#contributions)
+  - [Get Help](#get-help)
+  - [About Cloudinary](#about-cloudinary)
+  - [Additional Resources](#additional-resources)
+  - [Licence](#licence)
 
 ## Key Features
 
