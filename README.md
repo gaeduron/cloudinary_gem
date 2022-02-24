@@ -11,6 +11,21 @@ But the cloundiary team as not addressed it for a long time now.
 
 ⚠️ Make sure this for is updated at a version you need ⚠️
 
+## Changes
+<img width="1104" alt="Screenshot 2022-02-24 at 12 18 35" src="https://user-images.githubusercontent.com/11267346/155505388-0530c4a5-c841-4c47-af47-12ce02f22b99.png">
+
+
+call of this function in rails:
+https://github.com/rails/rails/blob/1df9b01fe61dbd81f10dcf44cddd689270f6d8ba/activestorage/app/models/active_storage/blob.rb#L221
+``` ruby
+  # Returns a URL that can be used to directly upload a file for this blob on the service. This URL is intended to be
+  # short-lived for security and only generated on-demand by the client-side JavaScript responsible for doing the uploading.
+  def service_url_for_direct_upload(expires_in: ActiveStorage.service_urls_expire_in)
+    service.url_for_direct_upload key, expires_in: expires_in, content_type: content_type, content_length: byte_size, checksum: checksum, custom_metadata: custom_metadata
+  end
+```
+
+
 
 
 
